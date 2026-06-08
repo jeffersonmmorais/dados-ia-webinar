@@ -84,7 +84,10 @@
           },
           body: JSON.stringify(payload)
         });
-        const result = await response.json();
+        const contentType = response.headers.get("content-type") || "";
+        const result = contentType.includes("application/json")
+          ? await response.json()
+          : { message: "Não foi possível concluir a inscrição. Tente novamente." };
 
         if (!response.ok) {
           if (result.fields) {

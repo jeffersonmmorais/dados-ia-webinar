@@ -184,8 +184,23 @@ function isSameOrigin(request: Request) {
   }
 
   try {
+    const originHost = new URL(origin).host;
+    const allowedHosts = new Set<string>();
     const requestUrl = new URL(request.url);
-    return new URL(origin).host === requestUrl.host;
+
+    allowedHosts.add(requestUrl.host);
+
+    const forwardedHost = request.headers.get("x-forwarded-host");
+    if (forwardedHost) {
+      allowedHosts.add(forwardedHost.split(",")[0]!.trim());
+    }
+
+    const publicSiteUrl = getEnv("PUBLIC_SITE_URL");
+    if (publicSiteUrl) {
+      allowedHosts.add(new URL(publicSiteUrl).host);
+    }
+
+    return allowedHosts.has(originHost);
   } catch {
     return false;
   }

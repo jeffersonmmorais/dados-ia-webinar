@@ -11,7 +11,7 @@ export default defineConfig({
     port: 4321
   },
   security: {
-    checkOrigin: true
+    checkOrigin: false
   },
   vite: {
     build: {
