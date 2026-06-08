@@ -1,0 +1,145 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Logo from "../components/Logo.astro";
+
+export const prerender = true;
+
+const whatsappGroupUrl =
+  import.meta.env.PUBLIC_WHATSAPP_GROUP_URL ||
+  "https://chat.whatsapp.com/SEU-CODIGO";
+---
+
+<BaseLayout
+  title="Inscrição confirmada | Webinário DADOS IA"
+  description="Sua inscrição no Webinário DADOS IA foi confirmada."
+  canonicalPath="/obrigado"
+  noindex={true}
+>
+  <main class="thanks-page">
+    <section class="thanks-hero" aria-labelledby="thanks-title">
+      <div class="thanks-container">
+        <Logo />
+
+        <div class="thanks-success" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M7 10v11M3 11v9a1 1 0 0 0 1 1h3V10H4a1 1 0 0 0-1 1ZM7 18h10.3a2 2 0 0 0 2-1.6l1.4-7A2 2 0 0 0 18.7 7H14l.7-3.2A2.3 2.3 0 0 0 12.5 1L7 10"></path>
+          </svg>
+        </div>
+
+        <p class="thanks-kicker">Inscrição registrada</p>
+        <h1 id="thanks-title">
+          Obrigado por se inscrever. Faltam apenas 2 passos.
+        </h1>
+        <p class="thanks-intro">
+          Sua vaga no Webinário DADOS IA está reservada. Conclua os passos
+          abaixo para receber todas as informações de acesso.
+        </p>
+
+        <div class="thanks-steps">
+          <article class="thanks-step">
+            <span class="thanks-step__number">01</span>
+            <div>
+              <h2>Entre no grupo do WhatsApp</h2>
+              <p>
+                O link da transmissão e os lembretes do encontro serão enviados
+                por lá.
+              </p>
+            </div>
+            <a
+              class="button thanks-step__button"
+              href={whatsappGroupUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Participar do grupo
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M14 7l5 5-5 5"></path>
+              </svg>
+            </a>
+          </article>
+
+          <article class="thanks-step">
+            <span class="thanks-step__number">02</span>
+            <div>
+              <h2>Responda à pesquisa enviada por e-mail</h2>
+              <p>
+                Queremos conhecer seus principais desafios para tornar o
+                conteúdo do webinário ainda mais útil para você.
+              </p>
+            </div>
+            <div class="thanks-step__mail">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="m3 7 9 6 9-6"></path>
+              </svg>
+              Verifique sua caixa de entrada
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="countdown-section" aria-labelledby="countdown-title">
+      <div class="thanks-container countdown-grid">
+        <div>
+          <p class="thanks-kicker">Webinário DADOS IA</p>
+          <h2 id="countdown-title">
+            Nos encontramos no dia 30 de junho, às 19h30.
+          </h2>
+          <p>Online, ao vivo e com participação gratuita.</p>
+        </div>
+
+        <div
+          class="countdown"
+          data-countdown
+          data-event-date="2026-06-30T19:30:00-03:00"
+          aria-label="Contagem regressiva para o webinário"
+        >
+          <div><strong data-days>00</strong><span>Dias</span></div>
+          <div><strong data-hours>00</strong><span>Horas</span></div>
+          <div><strong data-minutes>00</strong><span>Minutos</span></div>
+          <div><strong data-seconds>00</strong><span>Segundos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="thanks-footer">
+      <div class="thanks-container thanks-footer__inner">
+        <Logo />
+        <div class="thanks-footer__links">
+          <a href="/politica-de-privacidade">Política de Privacidade</a>
+          <p>© 2026 Gestorlearn. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    const countdown = document.querySelector<HTMLElement>("[data-countdown]");
+
+    if (countdown) {
+      const eventTime = new Date(countdown.dataset.eventDate || "").getTime();
+      const days = countdown.querySelector<HTMLElement>("[data-days]");
+      const hours = countdown.querySelector<HTMLElement>("[data-hours]");
+      const minutes = countdown.querySelector<HTMLElement>("[data-minutes]");
+      const seconds = countdown.querySelector<HTMLElement>("[data-seconds]");
+
+      const renderCountdown = () => {
+        const distance = Math.max(0, eventTime - Date.now());
+        const totalSeconds = Math.floor(distance / 1000);
+
+        days!.textContent = String(Math.floor(totalSeconds / 86400)).padStart(2, "0");
+        hours!.textContent = String(Math.floor((totalSeconds % 86400) / 3600)).padStart(2, "0");
+        minutes!.textContent = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, "0");
+        seconds!.textContent = String(totalSeconds % 60).padStart(2, "0");
+
+        return distance > 0;
+      };
+
+      renderCountdown();
+      const timer = window.setInterval(() => {
+        if (!renderCountdown()) window.clearInterval(timer);
+      }, 1000);
+    }
+  </script>
+</BaseLayout>

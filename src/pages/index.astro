@@ -1,0 +1,211 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Logo from "../components/Logo.astro";
+import SignupForm from "../components/SignupForm.astro";
+
+export const prerender = true;
+
+const title = "Webinário DADOS IA | Processos, dados e decisões com IA";
+const description =
+  "Webinário gratuito para empresários e gestores: como usar IA para organizar processos e transformar dados em decisões.";
+---
+
+<BaseLayout title={title} description={description}>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <Logo />
+        <p class="eyebrow">Webinário DADOS IA</p>
+        <h1 id="hero-title">
+          Como usar IA para organizar processos e transformar dados em decisões
+        </h1>
+        <p class="hero__lead">
+          Um encontro estratégico para empresários, gestores e profissionais de
+          empresas de serviços que querem aplicar IA de forma prática no negócio.
+        </p>
+
+        <div class="event-line" aria-label="Informações do evento">
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2v3M18 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"></path></svg>
+            30/06/2026
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
+            19h30
+          </span>
+          <span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m9 10 3 2 4-3"></path></svg>
+            Online e ao vivo
+          </span>
+          <span class="event-line__free">Participação gratuita</span>
+        </div>
+
+        <div class="hero__form" id="inscricao">
+          <p class="hero__form-title">Reserve gratuitamente o seu lugar</p>
+          <SignupForm />
+        </div>
+      </div>
+    </section>
+
+    <section class="audience section" aria-labelledby="audience-title">
+      <div class="container">
+        <header class="section-heading">
+          <p class="section-kicker">Para quem é</p>
+          <h2 id="audience-title">Este encontro é para você que...</h2>
+        </header>
+
+        <div class="audience-grid">
+          <article>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="7" r="4"></circle><path d="M3 21v-2a6 6 0 0 1 6-6h2M16 11l2 2 4-5"></path></svg>
+            </div>
+            <h3>Lidera uma empresa</h3>
+            <p>É dono, sócio, gestor ou coordenador de uma empresa de serviços.</p>
+          </article>
+          <article>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19V3M2 19h21"></path></svg>
+            </div>
+            <h3>Precisa organizar a operação</h3>
+            <p>Convive com tarefas repetitivas, processos dispersos e poucos indicadores.</p>
+          </article>
+          <article>
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0-3 11.2V18h6v-3.8A6 6 0 0 0 12 3ZM9 22h6M10 18h4"></path></svg>
+            </div>
+            <h3>Quer aplicar IA com critério</h3>
+            <p>Busca resultados práticos sem começar pela ferramenta ou por projetos complexos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="program section section--raised" aria-labelledby="program-title">
+      <div class="container program__grid">
+        <div class="program__visual" aria-label="Fluxo para aplicação prática de inteligência artificial">
+          <div class="program__visual-head">
+            <span>Mapa de aplicação</span>
+            <i>IA</i>
+          </div>
+          <ol class="process-map">
+            <li>
+              <span>01</span>
+              <div><strong>Gargalo</strong><small>identificar o problema</small></div>
+            </li>
+            <li>
+              <span>02</span>
+              <div><strong>Dados</strong><small>avaliar o que existe</small></div>
+            </li>
+            <li>
+              <span>03</span>
+              <div><strong>Prioridade</strong><small>comparar valor e risco</small></div>
+            </li>
+            <li>
+              <span>04</span>
+              <div><strong>Piloto</strong><small>começar com controle</small></div>
+            </li>
+          </ol>
+          <div class="program__visual-result">
+            <span>Resultado esperado</span>
+            <strong>Decisões mais claras</strong>
+          </div>
+        </div>
+        <div>
+          <p class="section-kicker">Conteúdo do webinário</p>
+          <h2 id="program-title">Da experimentação solta a um primeiro passo viável</h2>
+          <p class="program__intro">
+            Você vai entender como avaliar o contexto do negócio antes de
+            escolher ferramentas e iniciar projetos de IA.
+          </p>
+          <ul class="check-list">
+            <li>Por que muitas empresas usam IA de forma improvisada</li>
+            <li>Como identificar gargalos antes de escolher ferramentas</li>
+            <li>Como usar IA para organizar processos</li>
+            <li>Como transformar dados espalhados em informações para decisão</li>
+            <li>Como priorizar os primeiros casos de uso</li>
+            <li>Como começar com escopo controlado e menor risco</li>
+          </ul>
+          <div class="program__facts">
+            <span>30 de junho</span>
+            <span>19h30</span>
+            <span>Online e gratuito</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="outcomes section" aria-labelledby="outcomes-title">
+      <div class="container">
+        <header class="section-heading">
+          <p class="section-kicker">O que você leva</p>
+          <h2 id="outcomes-title">Clareza para decidir onde começar</h2>
+        </header>
+
+        <div class="outcome-grid">
+          <article>
+            <span>01</span>
+            <h3>Visão estratégica</h3>
+            <p>Entenda onde a IA pode gerar valor real e onde ela apenas adicionaria complexidade.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Critério de prioridade</h3>
+            <p>Avalie gargalos, dados disponíveis, impacto esperado e risco antes de investir.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Próximo passo possível</h3>
+            <p>Saia com uma lógica para começar pequeno, medir resultados e evoluir com controle.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="speaker section section--raised" aria-labelledby="speaker-title">
+      <div class="container speaker__grid">
+        <div class="speaker__photo">
+          <img
+            src="/images/foto_jef7.jpeg"
+            width="456"
+            height="509"
+            alt="Jefferson Morais, professor e pesquisador em Inteligência Artificial"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <p class="section-kicker">Quem conduz o encontro</p>
+          <h2 id="speaker-title">Jefferson Morais</h2>
+          <p>
+            Professor e pesquisador em Inteligência Artificial, com experiência
+            em Machine Learning, Ciência de Dados, automação, agentes de IA e
+            aplicações práticas de tecnologia em contextos educacionais e empresariais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta section" aria-labelledby="final-title">
+      <div class="container final-cta__inner">
+        <p class="section-kicker">Webinário gratuito</p>
+        <h2 id="final-title">
+          O primeiro passo não é escolher uma ferramenta. É entender onde a IA pode gerar valor.
+        </h2>
+        <a class="button" href="#inscricao">
+          Quero participar do webinário
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5"></path></svg>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <Logo />
+        <div class="footer__links">
+          <a href="/politica-de-privacidade">Política de Privacidade</a>
+          <p>© 2026 Gestorlearn. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+</BaseLayout>
