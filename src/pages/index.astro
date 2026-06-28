@@ -7,7 +7,7 @@ export const prerender = true;
 
 const title = "Webinário DADOS IA | Processos, dados e decisões com IA";
 const description =
-  "Webinário gratuito para empresários e gestores: como usar IA para organizar processos e transformar dados em decisões.";
+  "Conheça o método DADOS IA e entenda como aplicar Inteligência Artificial com mais clareza, critério e foco em resultado.";
 ---
 
 <BaseLayout title={title} description={description}>
@@ -21,13 +21,15 @@ const description =
         </h1>
         <p class="hero__lead">
           Um encontro estratégico para empresários, gestores e profissionais de
-          empresas de serviços que querem aplicar IA de forma prática no negócio.
+          empresas de serviços que querem conhecer o método DADOS IA e entender
+          como aplicar Inteligência Artificial com mais clareza, critério e foco
+          em resultado.
         </p>
 
         <div class="event-line" aria-label="Informações do evento">
           <span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 2v3M18 2v3M3 9h18M5 4h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"></path></svg>
-            30/06/2026
+            05/08/2026
           </span>
           <span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg>
@@ -43,6 +45,9 @@ const description =
         <div class="hero__form" id="inscricao">
           <p class="hero__form-title">Reserve gratuitamente o seu lugar</p>
           <SignupForm />
+          <p class="hero__tool-note">
+            Você não precisa contratar nenhuma ferramenta paga para participar do webinário.
+          </p>
         </div>
       </div>
     </section>
@@ -74,17 +79,54 @@ const description =
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a6 6 0 0 0-3 11.2V18h6v-3.8A6 6 0 0 0 12 3ZM9 22h6M10 18h4"></path></svg>
             </div>
             <h3>Quer aplicar IA com critério</h3>
-            <p>Busca resultados práticos sem começar pela ferramenta ou por projetos complexos.</p>
+            <p>Quer entender onde a IA faz sentido antes de escolher ferramentas ou abrir novas frentes.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="program section section--raised" aria-labelledby="program-title">
+    <section class="method section section--raised" aria-labelledby="method-title">
+      <div class="container">
+        <header class="section-heading">
+          <p class="section-kicker">Método DADOS IA</p>
+          <h2 id="method-title">Conheça o método DADOS IA</h2>
+        </header>
+
+        <div class="method-grid">
+          <article>
+            <span>D</span>
+            <h3>Diagnosticar</h3>
+            <p>Gargalos reais.</p>
+          </article>
+          <article>
+            <span>A</span>
+            <h3>Analisar</h3>
+            <p>Processos, dados, tarefas e decisões.</p>
+          </article>
+          <article>
+            <span>D</span>
+            <h3>Definir</h3>
+            <p>Prioridades de aplicação.</p>
+          </article>
+          <article>
+            <span>O</span>
+            <h3>Organizar</h3>
+            <p>Contexto e informações.</p>
+          </article>
+          <article>
+            <span>S</span>
+            <h3>Sistematizar</h3>
+            <p>Próximos passos.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="program section" aria-labelledby="program-title">
       <div class="container program__grid">
         <div class="program__visual" aria-label="Fluxo para aplicação prática de inteligência artificial">
           <div class="program__visual-head">
-            <span>Mapa de aplicação</span>
+            <span>Mapa de decisão</span>
             <i>IA</i>
           </div>
           <ol class="process-map">
@@ -102,31 +144,31 @@ const description =
             </li>
             <li>
               <span>04</span>
-              <div><strong>Piloto</strong><small>começar com controle</small></div>
+              <div><strong>Próximo passo</strong><small>definir por onde começar</small></div>
             </li>
           </ol>
           <div class="program__visual-result">
-            <span>Resultado esperado</span>
-            <strong>Decisões mais claras</strong>
+            <span>Foco do encontro</span>
+            <strong>Clareza para decidir onde a IA pode gerar valor</strong>
           </div>
         </div>
         <div>
           <p class="section-kicker">Conteúdo do webinário</p>
-          <h2 id="program-title">Da experimentação solta a um primeiro passo viável</h2>
+          <h2 id="program-title">Da experimentação solta a uma decisão mais clara sobre onde começar</h2>
           <p class="program__intro">
-            Você vai entender como avaliar o contexto do negócio antes de
-            escolher ferramentas e iniciar projetos de IA.
+            Você vai conhecer uma forma mais criteriosa de olhar para processos,
+            dados, produtividade e tomada de decisão antes de escolher qualquer ferramenta.
           </p>
           <ul class="check-list">
             <li>Por que muitas empresas usam IA de forma improvisada</li>
-            <li>Como identificar gargalos antes de escolher ferramentas</li>
-            <li>Como usar IA para organizar processos</li>
-            <li>Como transformar dados espalhados em informações para decisão</li>
-            <li>Como priorizar os primeiros casos de uso</li>
-            <li>Como começar com escopo controlado e menor risco</li>
+            <li>Como diagnosticar gargalos reais em empresas de serviços</li>
+            <li>Como analisar processos, dados, tarefas e decisões com mais clareza</li>
+            <li>Como priorizar oportunidades de uso da IA com foco em resultado</li>
+            <li>Como organizar contexto e informações antes de decidir por onde começar</li>
+            <li>Como sair com um próximo passo possível, sem depender de ferramenta paga</li>
           </ul>
           <div class="program__facts">
-            <span>30 de junho</span>
+            <span>05 de agosto de 2026</span>
             <span>19h30</span>
             <span>Online e gratuito</span>
           </div>
@@ -145,17 +187,17 @@ const description =
           <article>
             <span>01</span>
             <h3>Visão estratégica</h3>
-            <p>Entenda onde a IA pode gerar valor real e onde ela apenas adicionaria complexidade.</p>
+            <p>Entenda onde a IA pode gerar valor real em processos, dados, produtividade e decisões.</p>
           </article>
           <article>
             <span>02</span>
             <h3>Critério de prioridade</h3>
-            <p>Avalie gargalos, dados disponíveis, impacto esperado e risco antes de investir.</p>
+            <p>Avalie gargalos, informações disponíveis, impacto esperado e clareza de aplicação.</p>
           </article>
           <article>
             <span>03</span>
             <h3>Próximo passo possível</h3>
-            <p>Saia com uma lógica para começar pequeno, medir resultados e evoluir com controle.</p>
+            <p>Leve uma lógica para decidir por onde começar sem transformar IA em aposta ou improviso.</p>
           </article>
         </div>
       </div>
@@ -188,10 +230,10 @@ const description =
       <div class="container final-cta__inner">
         <p class="section-kicker">Webinário gratuito</p>
         <h2 id="final-title">
-          O primeiro passo não é escolher uma ferramenta. É entender onde a IA pode gerar valor.
+          O primeiro passo não é escolher uma ferramenta. É entender onde a IA pode gerar valor, e seguir um método para decidir por onde começar.
         </h2>
         <a class="button" href="#inscricao">
-          Quero participar do webinário
+          Quero participar do webinário gratuito
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M14 7l5 5-5 5"></path></svg>
         </a>
       </div>

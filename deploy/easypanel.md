@@ -62,6 +62,8 @@ BREVO_NAME_ATTRIBUTE=FIRSTNAME
 BREVO_LASTNAME_ATTRIBUTE=LASTNAME
 PUBLIC_SITE_URL=https://webinario.seudominio.com.br
 PUBLIC_WHATSAPP_GROUP_URL=https://chat.whatsapp.com/SEU-CODIGO
+PUBLIC_GTM_ID=GTM-XXXXXXX
+PUBLIC_META_PIXEL_ID=000000000000000
 TRUST_PROXY=true
 NODE_ENV=production
 HOST=0.0.0.0
@@ -70,8 +72,9 @@ PORT=4321
 
 Use o domínio real em `PUBLIC_SITE_URL`.
 
-As variáveis `PUBLIC_SITE_URL` e `PUBLIC_WHATSAPP_GROUP_URL` são usadas no
-build das páginas estáticas. Se você mudar qualquer uma delas, faça novo deploy.
+As variáveis `PUBLIC_SITE_URL`, `PUBLIC_WHATSAPP_GROUP_URL`, `PUBLIC_GTM_ID` e
+`PUBLIC_META_PIXEL_ID` são usadas no build das páginas estáticas. Se você mudar
+qualquer uma delas, faça novo deploy.
 
 ## 5. Configurar domínio e proxy
 
